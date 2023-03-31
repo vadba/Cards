@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards</title>
+    <script type="module" crossorigin src="./assets/index.js"></script>
+    <link rel="stylesheet" href="./assets/index.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="./assets/logomed.png" alt="medical center logo" class="logo-img" />
+        </div>
+        <div class="login">
+          <button class="button-login" data-modal-target="#modal">Вход</button>
+        </div>
+        <div>
+          <button class="button-test">Створити</button>
+        </div>
+        <div class="logout">
+          <button class="button-logout">Вийти</button>
+        </div>
+      </header>
+      <nav class="nav-filter">
+        <form id="filter-form">
+          <label for="context">Контекстний пошук</label>
+          <input type="text" name="context" id="context" class="filter" value="" />
+          <label for="priority">Статус</label>
+          <select name="priority" id="priority">
+            <option value="">Всі</option>
+            <option value="Звичайна">Звичайна</option>
+            <option value="Пріоритетна">Пріоритетна</option>
+            <option value="Невідкладна">Невідкладна</option>
+          </select>
+        </form>
+      </nav>
+      <main class="main">
+        <div id="overlay"></div>
+        <div class="modal-login" id="modal">
+          <button data-close-button class="close-button">&times;</button>
+          <div class="login-wrap show">
+            <div class="form-container login-form">
+              <h2>Login</h2>
+              <form action="#" id="login">
+                <div class="input-box">
+                  <span class="icon"></span>
+                  <input type="email" name="email" value="test@ua.ua" />
+                  <label>Email</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"></span>
+                  <input type="password" name="password" value="uvXCYnNMdqJhSF7" />
+                  <label>Password</label>
+                </div>
+                <div class="error-login"></div>
+                <button type="submit" class="btn-login button-login">Вход</button>
+                <div class="login-register">
+                  <p>
+                    Не маєте аккаунту?
+                    <a href="#" class="register-link">Зареєструватися</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="regist-wrap">
+            <div class="form-container register">
+              <h2>Registrstion</h2>
+              <form action="#" id="register">
+                <div class="input-box">
+                  <span class="icon"></span>
+                  <input type="text" required />
+                  <label>Name</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"></span>
+                  <input type="text" required />
+                  <label>Surname</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"></span>
+                  <input type="email" required />
+                  <label>Email</label>
+                </div>
+                <div class="input-box">
+                  <span class="icon"></span>
+                  <input type="password" required />
+                  <label>Password</label>
+                </div>
+                <button type="submit" class="btn-login button-login">Реєстрація</button>
+                <div class="login-register">
+                  <p>
+                    Вже маєте аккаунту?
+                    <a href="#" class="login-link">Вхід</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <ul class="tilesWrap"></ul>
+        <div class="no-content">No items have been added</div>
+        <div class="no-filter-content no-filter-content-hidden">No items have been find</div>
+      </main>
+    </div>
+    
+  </body>
+</html>
